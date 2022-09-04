@@ -42,7 +42,10 @@ int main(int argc, char ** argv)
 
 	/* restore the former settings */
 	tcsetattr(STDIN_FILENO,TCSANOW,&old_tio);
-
+	
+	//make the program nice and clean at the end :D
+	printf("\n");
+	
 	if ((poll_stdin.revents & POLLIN))
 		return 0;
 	return 1;
